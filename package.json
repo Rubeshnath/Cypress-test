@@ -1,0 +1,20 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "web automtion",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "cy:run": "cypress run"
+  },
+  
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
+    "cypress": "^12.7.0"
+  }
+  
+    
+  
+}
