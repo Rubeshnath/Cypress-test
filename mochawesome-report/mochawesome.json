@@ -1,0 +1,141 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-03-27T05:57:32.347Z",
+    "end": "2023-03-27T05:57:51.143Z",
+    "duration": 18796,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "34935065-f2e9-4df1-8301-c0f890b8ee00",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Tests\\loginTest.cy.js",
+      "file": "cypress\\e2e\\Tests\\loginTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2ee3026f-5ac6-423d-b96a-2573e57f6856",
+          "title": "Login tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify login",
+              "fullTitle": "Login tests Verify login",
+              "timedOut": null,
+              "duration": 3623,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.signIn();",
+              "err": {},
+              "uuid": "13bdf9eb-e8b7-4acc-883d-6398e982f574",
+              "parentUUID": "2ee3026f-5ac6-423d-b96a-2573e57f6856",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify user details",
+              "fullTitle": "Login tests verify user details",
+              "timedOut": null,
+              "duration": 6473,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.signIn();\ncy.wait(5000);\nif (cy.contains('Go to Dashboard')) {\n  cy.get('button[class=\"btn min-width btn-danger\"]').click();\n}\ncy.xpath('//div[@class=\"user-title justify-content-start mt-3\"]').should('contain', 'Welcome');\ncy.xpath('//div[@class=\"user-title justify-content-start mt-3\"]').should('contain', 'Client ID');",
+              "err": {},
+              "uuid": "a0a0113d-e33c-4fb6-bc8e-b6f9098cd67d",
+              "parentUUID": "2ee3026f-5ac6-423d-b96a-2573e57f6856",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify withdrawal button",
+              "fullTitle": "Login tests Verify withdrawal button",
+              "timedOut": null,
+              "duration": 6762,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.signIn();\ncy.wait(5000);\nif (cy.contains('Go to Dashboard')) {\n  cy.get('button[class=\"btn min-width btn-danger\"]').click();\n}\ncy.xpath('//button[normalize-space()=\"Withdrawal\"]').should('have.class', 'btn btn-lg min-width btn-solid-navigation mx-1').should('contain', 'Withdrawal').should('be.visible').should('be.enabled').click();",
+              "err": {},
+              "uuid": "64b663b5-ef9e-465b-98cd-febad5b3d62a",
+              "parentUUID": "2ee3026f-5ac6-423d-b96a-2573e57f6856",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "13bdf9eb-e8b7-4acc-883d-6398e982f574",
+            "a0a0113d-e33c-4fb6-bc8e-b6f9098cd67d",
+            "64b663b5-ef9e-465b-98cd-febad5b3d62a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16858,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "mochaFile": "cypress/results/results-[hash].xml",
+        "toConsole": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
